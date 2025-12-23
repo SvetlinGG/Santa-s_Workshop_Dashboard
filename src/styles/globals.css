@@ -1,0 +1,17 @@
+.page{
+    width: min(1100px, calc(100% - 2em));
+    margin: 0 auto;
+    padding: 1.25rem 0 2rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.status-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
