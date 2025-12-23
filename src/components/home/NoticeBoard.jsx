@@ -8,3 +8,18 @@ const DEFAULT_NOTICES = [
     "❄️ Warehouse temperature check at 18:00.",
 ];
 
+export default function NoticeBoard({ notices = DEFAULT_NOTICES}){
+
+    const limited = notices.slice(0, 5);
+
+    return (
+        <section className="notice-board">
+            <h2>Workshop Notice Board</h2>
+            <ul>
+                {limited.map((text, idx) => (
+                    <li key={idx}>{text}</li>
+                ))}
+            </ul>
+        </section>
+    );
+}
