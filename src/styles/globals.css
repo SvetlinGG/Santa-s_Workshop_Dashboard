@@ -14,4 +14,52 @@
 
 .card{
     border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+.card .value{
+    margin: 0.65rem 0 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.notice-board{
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.notice-board h2{
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.notice-board ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.notice-board li{
+    padding: 0.75rem 0.85rem;
+    border-radius: 12px;
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.02);
+    line-height: 1.35;
 }
