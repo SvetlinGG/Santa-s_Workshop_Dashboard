@@ -1,3 +1,4 @@
+import Layout from "./components/layout/Layout"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>It's My React Exam</h1>
+      <Layout />
     </>
   )
 }
