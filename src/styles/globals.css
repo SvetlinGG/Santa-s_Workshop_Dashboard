@@ -93,7 +93,7 @@
     background: #fff;
 }
 
-.nav a .active{
+.nav a.active{
     font-weight: 700;
     background: rgba(0, 0, 0, 0.06);
 }
