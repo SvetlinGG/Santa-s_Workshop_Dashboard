@@ -32,8 +32,9 @@ const mockToys = [
 ];
 
 const mockOrders = [
-  { id: "1", status: "pending", child: "Alice" },
-  { id: "2", status: "completed", child: "Bob" }
+  { id: "1", status: "pending", child: "Alice", country: "USA" },
+  { id: "2", status: "completed", child: "Bob", country: "Canada" },
+  { id: "3", status: "pending", child: "Charlie", country: "UK" }
 ];
 
 const mockElves = [
@@ -45,12 +46,23 @@ const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3030";
 
 export async function request(method, url, body) {
     // Use mock data for development
-    if (url === "/toys") return mockToys;
-    if (url === "/orders") return mockOrders;
-    if (url === "/elves") return mockElves;
-    if (url.startsWith("/toys/")) {
+    if (method === "GET" && url === "/toys") return mockToys;
+    if (method === "GET" && url === "/orders") return mockOrders;
+    if (method === "GET" && url === "/elves") return mockElves;
+    if (method === "GET" && url.startsWith("/toys/")) {
         const id = url.split("/")[2];
         return mockToys.find(t => t.id === id) || null;
+    }
+    
+    // Handle order creation
+    if (method === "POST" && url === "/orders") {
+        const newOrder = {
+            id: String(mockOrders.length + 1),
+            ...body,
+            status: "pending"
+        };
+        mockOrders.push(newOrder);
+        return newOrder;
     }
     
     // Original fetch logic (commented out until server is ready)

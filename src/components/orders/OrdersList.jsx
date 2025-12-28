@@ -24,9 +24,9 @@ export default function OrdersList({orders}){
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((o) => {
+                        {orders.map((o) => (
                             <OrderItem key={o.id} order={o} />
-                        })}
+                        ))}
                     </tbody>
                 </table>
             </div>
