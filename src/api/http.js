@@ -32,9 +32,9 @@ const mockToys = [
 ];
 
 const mockOrders = [
-  { id: "1", status: "pending", child: "Alice", country: "USA" },
-  { id: "2", status: "completed", child: "Bob", country: "Canada" },
-  { id: "3", status: "pending", child: "Charlie", country: "UK" }
+  { id: "1", status: "pending", childName: "Alice", country: "USA" },
+  { id: "2", status: "completed", childName: "Bob", country: "Canada" },
+  { id: "3", status: "pending", childName: "Charlie", country: "UK" }
 ];
 
 const mockElves = [
