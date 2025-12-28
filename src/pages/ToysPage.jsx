@@ -14,7 +14,7 @@ export default function ToysPage() {
   const [filters, setFilters] = useState({ category: "all", inStockOnly: false });
   const [sort, setSort] = useState("name-asc");
 
-  // 1) Fetch toys list
+  
   const {
     data: toys = [],
     isLoading,
@@ -25,14 +25,14 @@ export default function ToysPage() {
     queryFn: toysApi.getAll,
   });
 
-  // 2) Derive categories from server data
+  
   const categories = useMemo(() => {
     return Array.from(new Set(toys.map((t) => t.category))).sort((a, b) =>
       a.localeCompare(b)
     );
   }, [toys]);
 
-  // 3) Filter + sort (same logic as before)
+  
   const visibleToys = useMemo(() => {
     let list = toys;
 
