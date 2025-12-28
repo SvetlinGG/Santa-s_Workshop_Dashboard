@@ -15,19 +15,15 @@ export default function AppRoutes(){
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-
-            <Route path="/toys" element={<ToyPage />} />
-            <Route path="/toys/:toyId" element={<ToyDetailsPage />} />
-
-            <Route path="/orders" element={<OrdersPage />} />
-            <Route path="/orders/new" element={<NewOrderPage />} />
-
-            <Route path="/elves" element={<ElvesPage />} />
-            <Route path="/elves/:elfId/*" element={<ElfProfilePage />} />
-
-            <Route path="*" element={<NotFoundPage />} />
+                <Route index element={<HomePage />} />
+                <Route path="toys" element={<ToyPage />} />
+                <Route path="toys/:toyId" element={<ToyDetailsPage />} />
+                <Route path="orders" element={<OrdersPage />} />
+                <Route path="orders/new" element={<NewOrderPage />} />
+                <Route path="elves" element={<ElvesPage />} />
+                <Route path="elves/:elfId/*" element={<ElfProfilePage />} />
             </Route>
+            <Route path="*" element={<NotFoundPage />} />
         </Routes>
     )
 }
