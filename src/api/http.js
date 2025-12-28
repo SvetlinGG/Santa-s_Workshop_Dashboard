@@ -1,4 +1,4 @@
-// Mock data for development
+
 let mockToys = [
   // Toys
   { id: "1", name: "Wooden Train", category: "Toys", difficulty: "Easy", inStock: true },
@@ -45,7 +45,7 @@ let mockElves = [
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3030";
 
 export async function request(method, url, body) {
-    // Use mock data for development
+    
     if (method === "GET" && url === "/toys") return mockToys;
     if (method === "GET" && url === "/orders") return mockOrders;
     if (method === "GET" && url === "/elves") return mockElves;
@@ -54,7 +54,7 @@ export async function request(method, url, body) {
         return mockToys.find(t => t.id === id) || null;
     }
     
-    // Handle order creation
+    
     if (method === "POST" && url === "/orders") {
         const newOrder = {
             id: String(mockOrders.length + 1),
@@ -65,7 +65,7 @@ export async function request(method, url, body) {
         return newOrder;
     }
     
-    // Original fetch logic (commented out until server is ready)
+    // Original fetch logic 
     /*
     const res = await fetch(`${BASE_URL}${url}`, {
         method,
