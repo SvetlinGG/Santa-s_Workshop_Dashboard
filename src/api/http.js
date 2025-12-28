@@ -1,5 +1,5 @@
 // Mock data for development
-const mockToys = [
+let mockToys = [
   // Toys
   { id: "1", name: "Wooden Train", category: "Toys", difficulty: "Easy", inStock: true },
   { id: "2", name: "Building Blocks", category: "Toys", difficulty: "Easy", inStock: true },
@@ -31,13 +31,13 @@ const mockToys = [
   { id: "20", name: "Origami Paper", category: "Crafts", difficulty: "Medium", inStock: true }
 ];
 
-const mockOrders = [
+let mockOrders = [
   { id: "1", status: "pending", childName: "Alice", country: "USA" },
   { id: "2", status: "completed", childName: "Bob", country: "Canada" },
   { id: "3", status: "pending", childName: "Charlie", country: "UK" }
 ];
 
-const mockElves = [
+let mockElves = [
   { id: "1", name: "Buddy", isActive: true },
   { id: "2", name: "Jingle", isActive: false }
 ];
