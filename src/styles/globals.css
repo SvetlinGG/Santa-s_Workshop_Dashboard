@@ -116,3 +116,134 @@
         font-size: 1.75rem;
     }
 }
+
+
+
+.panel {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  }
+  
+  .panel h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+  
+  .control {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+  }
+  
+  .control span {
+    opacity: 0.85;
+    font-weight: 600;
+  }
+  
+  .control select {
+    padding: 0.55rem 0.65rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: #fff;
+  }
+  
+  .control.checkbox {
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  
+  .control.checkbox input {
+    width: 18px;
+    height: 18px;
+  }
+  
+ 
+  .table-wrap {
+    overflow: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+  }
+  
+  .table thead th {
+    text-align: left;
+    font-size: 0.9rem;
+    padding: 0.8rem 0.85rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .table tbody td {
+    padding: 0.8rem 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  
+  .table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+  }
+  
+  .link {
+    text-decoration: none;
+    font-weight: 700;
+    color: inherit;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.35);
+  }
+  
+  .muted {
+    opacity: 0.75;
+  }
+  
+  
+  .pill {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  
+  .pill.easy { background: rgba(0, 0, 0, 0.03); }
+  .pill.medium { background: rgba(0, 0, 0, 0.05); }
+  .pill.hard { background: rgba(0, 0, 0, 0.07); }
+  
+  .status {
+    font-weight: 700;
+  }
+  
+  .status.ok {
+    opacity: 0.9;
+  }
+  
+  .status.bad {
+    opacity: 0.75;
+  }
+  
+  @media (max-width: 900px) {
+    .controls { flex-direction: column; align-items: stretch; }
+    .control select { width: 100%; }
+  }
+  
