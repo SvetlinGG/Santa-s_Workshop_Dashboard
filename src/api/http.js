@@ -1,8 +1,34 @@
 // Mock data for development
 const mockToys = [
+  // Toys
   { id: "1", name: "Wooden Train", category: "Toys", difficulty: "Easy", inStock: true },
-  { id: "2", name: "Teddy Bear", category: "Plush", difficulty: "Medium", inStock: false },
-  { id: "3", name: "Robot Kit", category: "Electronics", difficulty: "Hard", inStock: true }
+  { id: "2", name: "Building Blocks", category: "Toys", difficulty: "Easy", inStock: true },
+  { id: "3", name: "Puzzle Game", category: "Toys", difficulty: "Medium", inStock: false },
+  { id: "4", name: "Remote Car", category: "Toys", difficulty: "Hard", inStock: true },
+  
+  // Plush
+  { id: "5", name: "Teddy Bear", category: "Plush", difficulty: "Medium", inStock: false },
+  { id: "6", name: "Stuffed Elephant", category: "Plush", difficulty: "Easy", inStock: true },
+  { id: "7", name: "Unicorn Plush", category: "Plush", difficulty: "Medium", inStock: true },
+  { id: "8", name: "Dragon Soft Toy", category: "Plush", difficulty: "Hard", inStock: false },
+  
+  // Electronics
+  { id: "9", name: "Robot Kit", category: "Electronics", difficulty: "Hard", inStock: true },
+  { id: "10", name: "LED Light Set", category: "Electronics", difficulty: "Medium", inStock: true },
+  { id: "11", name: "Music Box", category: "Electronics", difficulty: "Easy", inStock: false },
+  { id: "12", name: "Smart Watch", category: "Electronics", difficulty: "Hard", inStock: true },
+  
+  // Games
+  { id: "13", name: "Chess Set", category: "Games", difficulty: "Medium", inStock: true },
+  { id: "14", name: "Card Game", category: "Games", difficulty: "Easy", inStock: true },
+  { id: "15", name: "Board Game", category: "Games", difficulty: "Medium", inStock: false },
+  { id: "16", name: "Strategy Game", category: "Games", difficulty: "Hard", inStock: true },
+  
+  // Crafts
+  { id: "17", name: "Paint Set", category: "Crafts", difficulty: "Easy", inStock: true },
+  { id: "18", name: "Clay Kit", category: "Crafts", difficulty: "Medium", inStock: true },
+  { id: "19", name: "Jewelry Making", category: "Crafts", difficulty: "Hard", inStock: false },
+  { id: "20", name: "Origami Paper", category: "Crafts", difficulty: "Medium", inStock: true }
 ];
 
 const mockOrders = [
