@@ -37,6 +37,13 @@ export default function ToyDetailsPage(){
                 if(!old) return old;
                 return {...old, inStock: nextInStock};
             });
+
+            queryClient.setQueryData(["toys"], (old) => {
+                if(!old) return old;
+                return old.map(toy => 
+                    toy.id === id ? {...toy, inStock: nextInStock} : toy
+                );
+            });
             return { prevToy, prevToysList};
         },
 
