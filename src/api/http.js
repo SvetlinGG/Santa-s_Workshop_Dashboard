@@ -53,8 +53,12 @@ export async function request(method, url, body) {
         const id = url.split("/")[2];
         return mockToys.find(t => t.id === id) || null;
     }
+    if (method === "GET" && url.startsWith("/elves/")) {
+        const id = url.split("/")[2];
+        return mockElves.find(e => e.id === id) || null;
+    }
     
-    
+    // Handle order creation
     if (method === "POST" && url === "/orders") {
         const newOrder = {
             id: String(mockOrders.length + 1),
@@ -63,6 +67,16 @@ export async function request(method, url, body) {
         };
         mockOrders.push(newOrder);
         return newOrder;
+    }
+    
+    // Handle toy stock toggle
+    if (method === "PATCH" && url.startsWith("/toys/")) {
+        const id = url.split("/")[2];
+        const toy = mockToys.find(t => t.id === id);
+        if (toy && body.hasOwnProperty('inStock')) {
+            toy.inStock = body.inStock;
+            return toy;
+        }
     }
     
     // Original fetch logic 
