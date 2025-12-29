@@ -361,3 +361,38 @@
   color: #b00020;
   font-weight: 700;
 }
+
+
+.energy {
+  width: 180px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.energy-bar {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  width: 0%;
+}
+
+
+.tasks {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.task {
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.02);
+  list-style: disc;
+}
