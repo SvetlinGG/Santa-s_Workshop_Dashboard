@@ -104,6 +104,13 @@
     }
 }
 
+@media (max-width: 499px) {
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 400px) {
     .page {
         width: 100%;
@@ -124,11 +131,6 @@
     .header-actions {
         width: 100%;
         justify-content: space-between;
-    }
-
-    .nav {
-        flex-direction: column;
-        width: 100%;
     }
 
     .nav a {
@@ -168,4 +170,3 @@
         height: 180px;
     }
 }
-
