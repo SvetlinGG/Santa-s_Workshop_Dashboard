@@ -26,6 +26,22 @@ export default function HomePage(){
         queryFn: elvesApi.getAll,
     });
 
+    const toys = toysQuery.data || [];
+    const orders = ordersQuery.data || [];
+    const elves = elvesQuery.data || [];
+
+    const stats = useMemo(() => {
+        const totalToys = toys.length;
+
+        const pendingOrders = orders.filter(
+            (o) => String(o.status).toLowerCase() === "pending"
+        ).length;
+
+        const activeElves = elves.filter(e => e.isActive).length;
+
+        return { totalToys, pendingOrders, activeElves };
+    }, [toys, orders, elves]);
+
     if (toysQuery.isLoading || ordersQuery.isLoading || elvesQuery.isLoading){
         return (
             <div className="page">
@@ -48,22 +64,6 @@ export default function HomePage(){
             </div>
         );
     }
-
-    const toys = toysQuery.data || [];
-    const orders = ordersQuery.data || [];
-    const elves = elvesQuery.data || [];
-
-    const stats = useMemo(() => {
-        const totalToys = toys.length;
-
-        const pendingOrders = orders.filter(
-            (o) => String(o.status).toLowerCase() === "pending"
-        ).length;
-
-        const activeElves = elves.filter(e => e.isActive).length;
-
-        return { totalToys, pendingOrders, activeElves };
-    }, [toys, orders, elves]);
 
 
 
