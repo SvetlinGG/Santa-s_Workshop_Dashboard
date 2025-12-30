@@ -327,8 +327,6 @@ body {
     }
 }
 
-
-
 .panel {
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 14px;
@@ -747,7 +745,6 @@ body {
   width: 0%;
 }
 
-
 .tasks {
   margin: 0;
   padding-left: 1.1rem;
@@ -761,4 +758,95 @@ body {
   border: 1px dashed rgba(0, 0, 0, 0.16);
   background: rgba(0, 0, 0, 0.02);
   list-style: disc;
+}
+
+/* Responsive refinements */
+@media (max-width: 500px) {
+  .page {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header {
+    width: calc(100% - 2rem);
+    padding: 1rem 0 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.2rem;
+  }
+
+  .status-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    min-height: auto;
+  }
+
+  .details-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .table-wrap {
+    border-radius: 8px;
+  }
+
+  .table {
+    min-width: 520px;
+    font-size: 0.9rem;
+  }
+
+  .toy-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 520px) {
+  .table {
+    min-width: 420px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
 }
