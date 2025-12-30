@@ -7,7 +7,7 @@ import App from './App.jsx'
 import './styles/globals.css'
 import { playButtonSound } from './utils/sounds.js';
 
-// Add global button click sound
+
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('btn') || e.target.closest('.btn') || 
       e.target.tagName === 'A' || e.target.closest('a')) {
