@@ -1,0 +1,157 @@
+/* Layout styles - Header, footer, navigation, page structure */
+
+.page{
+    width: min(1100px, calc(100% - 2em));
+    margin: 0 auto;
+    padding: 1.25rem 0 2rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.content{
+    min-height: calc(100vh - 140px);
+}
+
+.header{
+    width: min(1100px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1.25rem 0 0.75rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.header h1{
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ff0000;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.countdown-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 180px;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-bottom: 0.4rem;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 35px;
+}
+
+.countdown-number {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #d32f2f;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d32f2f;
+    border-radius: 6px;
+    padding: 0.3rem 0.4rem;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-unit {
+    font-size: 0.65rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-top: 0.1rem;
+}
+
+.nav{
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 1.23rem 1.84rem;
+    border-radius: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: inherit;
+    background: #e8e8e8;
+    font-size: 1.05rem;
+    font-weight: 800;
+    box-shadow: 0 6px 12px rgba(13, 71, 161, 0.4), 0 4px 8px rgba(13, 71, 161, 0.3), 0 2px 4px rgba(13, 71, 161, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav a::before {
+    content: '❄ ❄ ❄';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: white;
+    opacity: 0.8;
+    animation: snowOnButton 3s ease-in-out infinite;
+}
+
+.nav a:hover {
+    box-shadow: 0 8px 16px rgba(13, 71, 161, 0.5), 0 6px 12px rgba(13, 71, 161, 0.4), 0 4px 8px rgba(13, 71, 161, 0.3);
+    transform: translateY(-2px);
+}
+
+.nav a:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(13, 71, 161, 0.4), 0 2px 4px rgba(13, 71, 161, 0.3);
+}
+
+.nav a.active{
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.footer{
+    width: min(1100px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1.25rem 0 2rem;
+    opacity: 0.75;
+}
+
+.page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+

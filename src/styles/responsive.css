@@ -1,0 +1,180 @@
+
+
+@media (max-width: 1200px) {
+    .toys-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .status-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card .value{
+        font-size: 1.75rem;
+    }
+
+    .header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .header-actions {
+        justify-content: space-between;
+    }
+
+    .countdown-header {
+        min-width: auto;
+    }
+
+    .controls { 
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+    
+    .control select { 
+        width: 100%; 
+    }
+
+    .toys-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .details-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .details-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .toys-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .table {
+        min-width: 420px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        width: 100%;
+        text-align: center;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tbody tr {
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 0.6rem 0.7rem;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.3rem 0;
+    }
+
+    .table tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        opacity: 0.75;
+    }
+
+    .table {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .page {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .header {
+        width: calc(100% - 2rem);
+        padding: 1rem 0 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.2rem;
+    }
+
+    .status-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        min-height: auto;
+    }
+
+    .details-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .table-wrap {
+        border-radius: 8px;
+    }
+
+    .table {
+        min-width: 520px;
+        font-size: 0.9rem;
+    }
+
+    .toy-card-image {
+        height: 180px;
+    }
+}
+

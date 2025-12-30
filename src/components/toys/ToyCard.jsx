@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function ToyCard({ toy }) {
     const getImagePath = (toyName) => {
         const imageName = toyName.toLowerCase().replace(/\s+/g, '-');
-        return `/images/images/${imageName}.jpg`; // Fixed path to nested images folder
+        return `/images/images/${imageName}.jpg`; 
     };
 
     const handleImageError = (e) => {
         const imageName = toy.name.toLowerCase().replace(/\s+/g, '-');
         const formats = ['jpg', 'jpeg', 'png', 'avif', 'webp'];
         
-        // Try other formats in the correct nested path
+       
         for (let format of formats) {
             const testSrc = `/images/images/${imageName}.${format}`;
             if (e.target.src !== testSrc) {
@@ -19,7 +19,7 @@ export default function ToyCard({ toy }) {
             }
         }
         
-        // Final fallback
+       
         e.target.src = '/images/placeholder.jpg';
     };
 
