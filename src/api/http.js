@@ -42,8 +42,6 @@ let mockElves = [
   { id: "2", name: "Jingle", isActive: false }
 ];
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3030";
-
 export async function request(method, url, body) {
     
     if (method === "GET" && url === "/toys") return mockToys;
@@ -97,6 +95,5 @@ export async function request(method, url, body) {
 
     return res.json();
     */
-    
     return null;
 }
