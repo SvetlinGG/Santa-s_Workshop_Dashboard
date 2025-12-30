@@ -38,15 +38,19 @@ let mockOrders = [
 ];
 
 let mockElves = [
-  { id: "1", name: "Buddy", isActive: true },
-  { id: "2", name: "Jingle", isActive: false }
+  { id: "1", name: "Buddy", isActive: true, department: "Toy Making", experience: "5 years" },
+  { id: "2", name: "Jingle", isActive: false, department: "Gift Wrapping", experience: "3 years" },
+  { id: "3", name: "Holly", isActive: true, department: "Quality Control", experience: "7 years" },
+  { id: "4", name: "Snowball", isActive: true, department: "Logistics", experience: "2 years" }
 ];
 
 export async function request(method, url, body) {
+    // Add small delay to simulate network
+    await new Promise(resolve => setTimeout(resolve, 100));
     
-    if (method === "GET" && url === "/toys") return mockToys;
-    if (method === "GET" && url === "/orders") return mockOrders;
-    if (method === "GET" && url === "/elves") return mockElves;
+    if (method === "GET" && url === "/toys") return [...mockToys];
+    if (method === "GET" && url === "/orders") return [...mockOrders];
+    if (method === "GET" && url === "/elves") return [...mockElves];
     if (method === "GET" && url.startsWith("/toys/")) {
         const id = url.split("/")[2];
         return mockToys.find(t => t.id === id) || null;
