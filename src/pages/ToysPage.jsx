@@ -16,7 +16,7 @@ export default function ToysPage() {
   const [filters, setFilters] = useState({ category: "all", inStockOnly: false });
   const [sort, setSort] = useState("name-asc");
   const [page, setPage] = useState(1);
-  const pageSize = 5;
+  const pageSize = 8;
 
   const {
     data: toys = [],

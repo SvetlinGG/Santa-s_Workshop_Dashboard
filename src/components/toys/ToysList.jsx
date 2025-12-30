@@ -1,4 +1,5 @@
-import ToyItem from "./ToyItem";
+import ToyCard from "./ToyCard";
+
 export default function ToysList({ toys }){
     if (!toys.length){
         return (
@@ -10,28 +11,10 @@ export default function ToysList({ toys }){
     }
 
     return (
-        <section className="panel">
-            <h3>Toys</h3>
-
-            <div className="table-wrap">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th style={{ width: "90px"}} >ID</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Difficulty</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {toys.map((t) => (
-                            <ToyItem key={t.id} toy={t} />
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+        <section className="toys-grid">
+            {toys.map((toy) => (
+                <ToyCard key={toy.id} toy={toy} />
+            ))}
         </section>
     );
 }
