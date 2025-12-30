@@ -8,6 +8,8 @@ import { toysApi } from "../api/toys.api";
 import { ordersApi } from "../api/orders.api";
 import { elvesApi } from "../api/elves.api";
 import { useMemo } from "react";
+import Countdown from '../components/common/Countdown';
+
 
 export default function HomePage(){
     const toysQuery = useQuery({
@@ -75,6 +77,7 @@ export default function HomePage(){
                 pendingOrders={stats.pendingOrders}
                 activeElves={stats.activeElves}
             />
+            <Countdown />
             <NoticeBoard />
         </div>
     );
