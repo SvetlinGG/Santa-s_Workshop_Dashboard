@@ -849,4 +849,32 @@ body {
     width: 100%;
     text-align: center;
   }
+
+  /* Make order & elves tables more readable on very small screens */
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.6rem 0.7rem;
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    opacity: 0.75;
+  }
+
+  .table {
+    min-width: 0;
+  }
 }

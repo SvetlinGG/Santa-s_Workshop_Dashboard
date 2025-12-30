@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 export default function ElfItem({ elf }){
     return (
         <tr>
-            <td>
+            <td data-label="Name">
                 <Link to={`/elves/${elf.id}`} className="link">
                  {elf.name}
                 </Link>
             </td>
-            <td>{elf.role}</td>
-            <td>
+            <td data-label="Role">{elf.role}</td>
+            <td data-label="Energy">
                 <div className="energy">
                     <div className="energy-bar" style={{ width: `${Number(elf.energy) || 0}%` }} />
                 </div>
