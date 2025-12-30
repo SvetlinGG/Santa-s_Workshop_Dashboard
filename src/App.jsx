@@ -7,20 +7,24 @@ import NewOrderPage from "./pages/NewOrderPage"
 import ElvesPage from "./pages/ElvesPage"
 import ElfProfilePage from "./pages/ElfProfilePage"
 import ToyDetailsPage from "./pages/ToyDetailsPage"
+import Snow from "./components/common/Snow"
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="toys" element={<ToysPage />} />
-        <Route path="toys/:toyId" element={<ToyDetailsPage />} />
-        <Route path="orders" element={<OrdersPage />} />
-        <Route path="orders/new" element={<NewOrderPage />} />
-        <Route path="elves" element={<ElvesPage />} />
-        <Route path="elves/:elfId/*" element={<ElfProfilePage />} />
-      </Route>
-    </Routes>
+    <>
+      <Snow />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="toys" element={<ToysPage />} />
+          <Route path="toys/:toyId" element={<ToyDetailsPage />} />
+          <Route path="orders" element={<OrdersPage />} />
+          <Route path="orders/new" element={<NewOrderPage />} />
+          <Route path="elves" element={<ElvesPage />} />
+          <Route path="elves/:elfId/*" element={<ElfProfilePage />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
 

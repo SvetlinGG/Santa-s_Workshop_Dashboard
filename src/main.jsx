@@ -5,6 +5,15 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import {queryClient} from "./queryClient";
 import App from './App.jsx'
 import './styles/globals.css'
+import { playButtonSound } from './utils/sounds.js';
+
+// Add global button click sound
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btn') || e.target.closest('.btn') || 
+      e.target.tagName === 'A' || e.target.closest('a')) {
+    playButtonSound();
+  }
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <QueryClientProvider client={queryClient}>
