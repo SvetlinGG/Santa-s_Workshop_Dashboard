@@ -850,7 +850,7 @@ body {
     text-align: center;
   }
 
-  /* Make order & elves tables more readable on very small screens */
+  
   .table thead {
     display: none;
   }
