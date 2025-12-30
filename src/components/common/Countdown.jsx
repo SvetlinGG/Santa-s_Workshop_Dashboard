@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Countdown() {
-    const [timeLeft, setTimeLeft] = useState("");
+    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
         const calculateTimeLeft = () => {
@@ -19,7 +19,7 @@ export default function Countdown() {
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
             
-            return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            return { days, hours, minutes, seconds };
         };
 
         const timer = setInterval(() => {
@@ -34,7 +34,24 @@ export default function Countdown() {
     return (
         <div className="countdown-header">
             <span className="countdown-label">🎄 Christmas:</span>
-            <span className="countdown-time">{timeLeft}</span>
+            <div className="countdown-grid">
+                <div className="countdown-item">
+                    <span className="countdown-number">{timeLeft.days}</span>
+                    <span className="countdown-unit">Days</span>
+                </div>
+                <div className="countdown-item">
+                    <span className="countdown-number">{timeLeft.hours}</span>
+                    <span className="countdown-unit">Hours</span>
+                </div>
+                <div className="countdown-item">
+                    <span className="countdown-number">{timeLeft.minutes}</span>
+                    <span className="countdown-unit">Min</span>
+                </div>
+                <div className="countdown-item">
+                    <span className="countdown-number">{timeLeft.seconds}</span>
+                    <span className="countdown-unit">Sec</span>
+                </div>
+            </div>
         </div>
     );
 }

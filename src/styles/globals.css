@@ -1,11 +1,33 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, 
+        #e3f2fd 0%, 
+        #bbdefb 25%, 
+        #2196f3 50%, 
+        #1976d2 75%, 
+        #0d47a1 100%);
+    background-size: 400% 400%;
+    animation: iridescent 8s ease-in-out infinite;
+    min-height: 100vh;
+}
+
+@keyframes iridescent {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .page{
     width: min(1100px, calc(100% - 2em));
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1.25rem 0 2rem;
     display: grid;
-    gap: 1rem;
-    max-height: calc(100vh - 200px);
-    overflow: hidden;
+    gap: 1.25rem;
 }
 
 .status-cards {
@@ -98,21 +120,50 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-width: 120px;
+    min-width: 180px;
 }
 
 .countdown-label {
     font-size: 0.8rem;
     font-weight: 600;
     opacity: 0.8;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
 }
 
-.countdown-time {
-    font-size: 0.9rem;
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 35px;
+}
+
+.countdown-number {
+    font-size: 1rem;
     font-weight: 800;
     color: #d32f2f;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d32f2f;
+    border-radius: 6px;
+    padding: 0.3rem 0.4rem;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-unit {
+    font-size: 0.65rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-top: 0.1rem;
 }
 
 .nav{
@@ -436,7 +487,7 @@
 .toys-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -446,16 +497,16 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 280px;
 }
 
 .toy-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 0 10px #ff69b4, 0 0 15px #ff69b4, 0 0 20px #ff69b4;
+    border: 2px solid #ff69b4;
 }
 
 .toy-card-image {
-    height: 160px;
+    height: 200px;
     overflow: hidden;
     background: #f8f8f8;
 }
@@ -467,21 +518,16 @@
 }
 
 .toy-card-content {
-    padding: 0.75rem;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 1rem;
 }
 
 .toy-card-title {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #333;
     text-decoration: none;
-    margin-bottom: 0.4rem;
-    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
 .toy-card-title:hover {
@@ -492,27 +538,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 .toy-category {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #666;
     font-weight: 600;
 }
 
 .toy-card-stock {
     text-align: center;
-}
-
-.page {
-    width: min(1100px, calc(100% - 2em));
-    margin: 0 auto;
-    padding: 1rem 0;
-    display: grid;
-    gap: 1rem;
-    max-height: calc(100vh - 200px);
-    overflow: hidden;
 }
 
 @media (max-width: 1200px) {
