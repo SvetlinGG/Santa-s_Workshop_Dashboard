@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { toysApi } from "../api/toys.api";
@@ -7,12 +7,17 @@ import ToyFilters from "../components/toys/ToyFilters";
 import ToysList from "../components/toys/ToysList";
 import Loader from "../components/common/Loader";
 import ErrorFallback from "../components/common/ErrorFallback";
+import Pagination from "../components/common/Pagination";
+
 
 const difficultyRank = { Easy: 1, Medium: 2, Hard: 3 };
 
 export default function ToysPage() {
   const [filters, setFilters] = useState({ category: "all", inStockOnly: false });
   const [sort, setSort] = useState("name-asc");
+
+  const [page, setPage] = useState(1);
+  const pageSize = 5;
 
   
   const {
@@ -68,6 +73,15 @@ export default function ToysPage() {
     return sorted;
   }, [toys, filters, sort]);
 
+  const total = visibleToys.length;
+  const pagedToys = useMemo(() => {
+    const start = (page - 1) * pageSize;
+    return visibleToys.slice(start, start + pageSize);
+  }, [visibleToys, page]);
+
+  
+  useEffect(() => setPage(1), [filters, sort]);
+
   if (isLoading) return <Loader text="Loading toys..." />;
   if (isError) return <ErrorFallback title="Failed to load toys" error={error} />;
 
@@ -83,7 +97,8 @@ export default function ToysPage() {
         onSortChange={setSort}
       />
 
-      <ToysList toys={visibleToys} />
+      <ToysList toys={pagedToys} />
+      <Pagination page={page} pageSize={pageSize} total={total} onPageChange={setPage} />
     </div>
   );
 }

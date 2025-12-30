@@ -1,4 +1,3 @@
-
 export default function Pagination({ page, pageSize, total, onPageChange }) {
     const totalPages = Math.max(1, Math.ceil(total / pageSize));
     const canPrev = page > 1;
@@ -19,5 +18,4 @@ export default function Pagination({ page, pageSize, total, onPageChange }) {
         </button>
       </div>
     );
-  }
-  
+}
