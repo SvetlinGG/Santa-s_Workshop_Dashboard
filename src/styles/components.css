@@ -171,7 +171,7 @@
 
 /* Tables */
 .table-wrap {
-    overflow: auto;
+    overflow-x: hidden;
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -179,7 +179,6 @@
 .table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 680px;
 }
 
 .table thead th {
