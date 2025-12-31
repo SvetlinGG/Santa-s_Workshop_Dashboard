@@ -111,6 +111,32 @@
     overflow-wrap: anywhere;
     word-break: break-word;
   }
+
+/* Mobile card-style */
+@media (max-width: 520px) {
+    .table thead {
+      display: none;
+    }
+  
+    .table tbody tr {
+      display: block;
+      padding: 0.6rem 0.7rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  
+    .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.3rem 0;
+    }
+  
+    .table tbody td::before {
+      content: attr(data-label);
+      font-weight: 700;
+      opacity: 0.75;
+    }
+  }
   
 
 
