@@ -15,7 +15,7 @@ export default function Snow() {
             
             setTimeout(() => {
                 snowflake.remove();
-            }, 5000);
+            }, 1000);
         };
 
         const snowInterval = setInterval(createSnowflake, 100);
