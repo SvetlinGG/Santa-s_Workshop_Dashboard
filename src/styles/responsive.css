@@ -23,6 +23,17 @@
     grid-template-columns: 1fr;
     }
 }
+
+/* Status cards */
+@media (max-width: 900px) {
+    .status-cards {
+    grid-template-columns: 1fr;
+    }
+  
+    .card .value {
+    font-size: 1.75rem;
+    }
+}
   
 
 
