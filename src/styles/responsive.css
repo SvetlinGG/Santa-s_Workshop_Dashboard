@@ -94,6 +94,23 @@
       justify-content: center;
     }
   }
+   /* Tables  */
+   .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    min-width: 0;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
   
 
 
