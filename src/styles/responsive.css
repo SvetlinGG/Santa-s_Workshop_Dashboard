@@ -34,6 +34,41 @@
     font-size: 1.75rem;
     }
 }
+
+/* Header and Navigation */
+@media (max-width: 900px) {
+    .header-row {
+    display: flex;
+    flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+  
+    .header-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 499px) {
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+  
+    .nav a {
+      width: 100%;
+      text-align: center;
+    }
+  }
   
 
 
